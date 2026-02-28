@@ -8,3 +8,9 @@ env-*/
 # (opcional) cache do Python
 __pycache__/
 *.pyc
+
+# Datasets
+
+cifar*/
+cifar*
+MNIST/

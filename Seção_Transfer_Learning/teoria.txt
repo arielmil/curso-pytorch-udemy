@@ -1,0 +1,30 @@
+Transfer learning consiste em usar uma rede neural treinada exaustivamente em uma tarefa genérica,
+para a aplicação de uma tarefa especifica
+
+Exemplo:
+
+    Uma rede que tenha sido treinada para classificar diferentes objetos por imagem,
+    seja aplicada para a tarefa de classificar tipos diferentes de felinos.
+
+
+VGG16:
+
+    Uma rede neural convolucional usada para classificação de imagens,
+    treinada no banco de dados ImageNET, que contém mil imagens diferentes para cada uma de suas mil classes.
+    Ou seja, tem no total um milhão de imagens.
+
+Fine-tuning:
+
+    Um ajuste fino feito para adequar a rede neural generica, para a tarefa especifica.
+    Um ajuste fino típico, pode ser substituir a ultima camada da rede neural,
+    por uma camada ou conjunto de camadas que se adequem ao problema especifico.
+
+    Por exemplo, a VGG16 possui em sua ultima camada a aplicação de softmax para mil classes,
+    ou seja, possui 1000 neuronios de saída, cada um com uma probabilidade em que todas somadam, resultam em 1.
+
+    Caso o problema especifico possua um número diferente de classes, é necessário adaptar esta camada para refletir o número de classes que o problema especifico tem.
+
+    Outro tipo de fine-tuning é não treinar a rede inteira novamente, apenas treinar uma parte dela, e congelar os pesos e biases do resto dela.
+
+    Por exemplo, treinar apenas a parte responsável pela classificação (a parte densa da rede),
+    e manter a parte de extração de features (A parte convolucional) intacta.
